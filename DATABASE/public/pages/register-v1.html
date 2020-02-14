@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+    <link rel="icon" href="../img/" />
+    <title>Rocket</title>
+    <!-- Core Styles-->
+    <link href="../css/app.min.css" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content content__authentication  ltr">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="authentication">
+            <h4 class="authentication__title">Register</h4>
+            <p class="authentication__desc">
+              You already an account ?
+              <a class="text--primary" href="#">Login here.</a>
+            </p>
+            <form class="authentication__form" data-toggle="validator" />
+              <div class="form__group has--feedback">
+                <label class="form__label mb--0">Username</label>
+                <div class="input__group--style">
+                  <input class="form__control--style" type="text" id="inputStyleUser" placeholder="Username" required="required" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputStyleUser"></label><span class="input__group__addon"><i class="fa fa-user"></i></span>
+                </div>
+              </div>
+              <div class="form__group has--feedback">
+                <label class="form__label mb--0">E-mail</label>
+                <div class="input__group--style">
+                  <input class="form__control--style" type="email" id="inputStyleEmail" placeholder="E-mail" required="required" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputStyleEmail"></label><span class="input__group__addon"><i class="fa fa-envelope"></i></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                  <div class="form__group has--feedback">
+                    <label class="form__label mb--0">Password</label>
+                    <div class="input__group--style">
+                      <input class="form__control--style" type="password" id="inputStylePassword" placeholder="Password" required="required" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputStylePassword"></label><span class="input__group__addon"><i class="fa fa-key"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                  <div class="form__group has--feedback">
+                    <label class="form__label mb--0">Confrim Password</label>
+                    <div class="input__group--style">
+                      <input class="form__control--style" type="password" id="inputStyleConfrimPassword" placeholder="Password" required="required" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputStyleConfrimPassword"></label><span class="input__group__addon"><i class="fa fa-key"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__group has--feedback">
+                <label class="form__label mb--0">Address</label>
+                <div class="input__group--style">
+                  <input class="form__control--style" type="text" id="inputStyleAddres" placeholder="Address" required="required" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputStyleAddres"></label><span class="input__group__addon"><i class="fa fa-home"></i></span>
+                </div>
+              </div>
+              <div class="form__group has--feedback">
+                <label class="form__label mb--0">Telephone</label>
+                <div class="input__group--style">
+                  <input class="form__control--style" type="text" id="inputStyleTelephone" placeholder="Telephone" required="required" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputStyleTelephone"></label><span class="input__group__addon"><i class="fa fa-phone"></i></span>
+                </div>
+              </div>
+              <div class="form__footer">
+                <div class="form__group">
+                  <div class="form__check form__check--inline">
+                    <div class="checkbox checkbox--primary">
+                      <input class="check" type="checkbox" id="checkbox02" required="required" />
+                      <label for="checkbox02">I agree</label>
+                    </div>
+                  </div><a class="text--primary" href="#"> terms</a>
+                </div>
+              </div>
+              <div class="form__btn">
+                <button class="btn btn--primary btn--round" type="submit">Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="../js/app.min.js"></script>
+    <script src="../js/forms/validator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,544 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='author' content='zwolek')
+    meta(name='description' content='Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss')
+    meta(name='keywords' content='Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug')
+    link(rel='icon' href='../img/')
+    title Rocket
+    //-  Core Styles
+    link(href='./css/app.min.css' rel='stylesheet' type='text/css')
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+    //- Header /////
+.header.header--fixed
+    //-  Header Left  
+    .header__left
+        .only--mobile
+            .hamburger.hamburger--collapse.hamburger--mobile
+                .hamburger__box
+                    .hamburger__inner
+        .header__brand
+            a.brand__link(href='./index.html')
+                img.brand__img(src='./img/logo.png' alt='')
+                img.brand__img--mobile(src='./img/logo-m.png' alt='')
+                span.brand__name Rocket
+        .only--mobile
+            button.btn.header__btn--toggler(type='button')
+                i.fa.fa-ellipsis-v
+    //-   Header Right /////
+    .header__right.header__toggle
+        .header__content
+            //-  Hidden Search /////
+            .header__search.search--close
+                .search__group
+                    i.search__icon.fa.fa-search
+                    input.search__control.form__control(type='text' placeholder='Search...')
+                    button.btn.search__btn--close(type='button')
+                        i.fa.fa-times
+            //-  Content Left /////
+            .content__left
+                .hamburger.hamburger--collapse.is--active.sidebar--toggle
+                    .hamburger__box
+                        .hamburger__inner
+                button.btn.btn__screen(type='button')
+                    i.fa.fa-arrows-alt
+            //-   Content Right /////
+            ul.nav.content__right
+                li.nav__item.nav__item--desktop
+                    button.btn.btn__search(type='button')
+                        i.fa.fa-search
+                li.nav__item
+                    .notifications.dropdown
+                        a.dropdown__toggle.notifications__dropdown.nav__link(href='#' data-toggle='dropdown')
+                            i.notifications__icon.fa.fa-bell
+                            span.only--mobile notifications
+                            span.status.status--pulse
+                        .dropdown__menu.notifications__menu
+                            .notifications__header
+                                span.notifications__title latest notifications
+                                button.btn.btn--mute(type='button')
+                                    i.fa.fa-bell-slash
+                            ul.notifications__content
+                                li.notifications__wrapper.list__group__item
+                                    a.notifications__item(href='#')
+                                        span.item__media
+                                            span.notification__alert.notification__alert--info
+                                                i.fa.fa-info
+                                        span.item__content
+                                            h6.item__title Information
+                                            p.item__desc New product is available
+                                            span.item__info 15 min ago
+                                        button.btn.notifications__btn--close(type='button')
+                                            i.icon--close.fa.fa-times
+                                li.notifications__wrapper.list__group__item
+                                    a.notifications__item(href='#')
+                                        span.item__media
+                                            img.item__img(src='./img/users/5.jpeg' alt='')
+                                        span.item__content
+                                            h6.item__title Cara Stevens
+                                            p.item__desc share your post: Lorem ipsum dolor sit amet.
+                                            span.item__info 30 min ago
+                                    button.btn.notifications__btn--close(type='button')
+                                        i.icon--close.fa.fa-times
+                                li.notifications__wrapper.list__group__item
+                                    a.notifications__item(href='#')
+                                        span.item__media
+                                            span.notification__alert.notification__alert--warning
+                                                i.fa.fa-warning
+                                        span.item__content
+                                            h6.item__title Warning
+                                            p.item__desc DDos attack
+                                            span.item__info 1 hour ago
+                                        button.btn.notifications__btn--close(type='button')
+                                            i.icon--close.fa.fa-times
+                                li.notifications__wrapper.list__group__item
+                                    a.notifications__item(href='#')
+                                        span.item__media
+                                            img.item__img(src='./img/users/14.jpeg' alt='')
+                                        span.item__content
+                                            h6.item__title Sakura Yamamoto
+                                            p.item__desc Follow your profile on twitter
+                                            span.item__info 7 hours ago
+                                    button.btn.notifications__btn--close(type='button')
+                                        i.icon--close.fa.fa-times
+                            .notifications__footer
+                                a.notifications__link(href='#') sea all notifications
+                li.nav__item.user.dropdown.nav__item--desktop
+                    a.dropdown__toggle.user__dropdown(href='#' data-toggle='dropdown')
+                        img.img-fluid.user__img(src='./img/profile/profile-small.jpg' alt='')
+                    .dropdown__menu.user__menu
+                        .user__preview
+                            .user__top__content
+                                img.img-fluid.user__img(src='./img/profile/profile-big.jpg' alt='')
+                            h6.user__title Matthew Doe
+                            span.user__desc Front-End Developer
+                        a.dropdown__item.user__link(href='#')
+                            i.user__icon.fa.fa-user
+                            | profile
+                        a.dropdown__item.user__link(href='#')
+                            i.user__icon.fa.fa-envelope
+                            | inbox
+                        a.dropdown__item.user__link(href='#')
+                            i.user__icon.fa.fa-sign-out
+                            | sign out
+                li.nav__item.nav__item--mobile
+                    a.nav__link(href='#')
+                        i.user__icon.fa.fa-user
+                        | profile
+                li.nav__item.nav__item--mobile
+                    a.nav__link(href='#')
+                        i.user__icon.fa.fa-envelope
+                        | inbox
+                li.nav__item.nav__item--mobile
+                    a.nav__link(href='#')
+                        i.user__icon.fa.fa-sign-out
+                        | sign out
+.page
+    //-   Sidebar Left /////
+    .sidebar__left
+        .sidebar--bg
+        nav.sidebar__nav.sidebar__scroll
+            ul.sidebar__menu
+                li.sidebar__header navigation
+                li.sidebar__item
+                    a.active.sidebar__link.link--single(href='./index.html')
+                        i.link__icon.fa.fa-home
+                        span.link__name home
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-sliders
+                        span.link__name layouts
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/boxed-layout.html') boxed layout
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/header-v1.html') header v1
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/header-v2.html') header v2
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/header-v2-fixed.html') header v2 fixed
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/footer.html') footer
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v1.html') sidebar v1
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v1-fixed.html') sidebar v1 fixed
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v1-hidden.html') sidebar v1 hidden
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v1-sticky.html') sidebar v1 sticky
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v2.html') sidebar v2
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v2-fixed.html') sidebar v2 fixed
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sidebar-v2-sticky.html') sidebar v2 sticky
+                li.sidebar__header Components
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-magic
+                        span.link__name ui components
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/alerts.html') alerts
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/badges.html') badges
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/buttons.html') buttons
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/cards.html') cards
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/dropdowns.html') dropdowns
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/grid.html') grid
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/list-group.html') list group
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/modals.html') modals
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/navs.html') navs
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/pagination.html') pagination
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/popovers-tooltips.html') popovers &amp; tooltips
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/progress-bars.html') progress bars
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/spinners.html') spinners
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/typography.html') typography
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-list
+                        span.link__name Forms
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/basic-forms.html') basic forms
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/dropzone-upload.html') dropzone upload
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/forms-layout.html') forms layout
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/forms-upload.html') forms upload
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/forms-validation.html') forms validation
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/input-group.html') input group
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/input-mask.html') input mask
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/wysiwyg-editor.html') wysiwyg editor
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/xeditable.html') x-editable
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-table
+                        span.link__name Tables
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/basic-tables.html') basic tables
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/datatables.html') datatables
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-font
+                        span.link__name Icons
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/font-awesome.html') font awesome
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/ionicons.html') ionicons
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/material-design-icons.html') material design icons
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/weather-icons.html') weather icons
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-line-chart
+                        span.link__name Charts
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/c3-js.html') c3
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/chart-js.html') chart.js
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/chartist-js.html') chartist
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/flot-js.html') flot
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/morris-js.html') morris.js
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/peity-js.html') peity
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/rickshaw-js.html') rickshaw
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/sparkline-js.html') sparkline
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-map
+                        span.link__name Maps
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/google-maps.html') google maps
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/jqvmap.html') vector maps
+                li.sidebar__header Features
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-lock
+                        span.link__name authentication
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/forgot-password-v1.html') forgot password v1
+                            a.sidebar__link(href='./pages/forgot-password-v2.html') forgot password v2
+                            a.sidebar__link(href='./pages/lockscreen-v1.html') lockscreen v1
+                            a.sidebar__link(href='./pages/lockscreen-v2.html') lockscreen v2
+                            a.sidebar__link(href='./pages/register-v1.html') register v1
+                            a.sidebar__link(href='./pages/register-v2.html') register v2
+                            a.sidebar__link(href='./pages/sign-in-v1.html') sign in v1
+                            a.sidebar__link(href='./pages/sign-in-v2.html') sign in v2
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-shopping-cart
+                        span.link__name e-commerce
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/customers.html') customers
+                            a.sidebar__link(href='./pages/products.html') products
+                            a.sidebar__link(href='./pages/orders.html') orders
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-rocket
+                        span.link__name apps
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/chat.html') chat
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/inbox.html') inbox
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-external-link
+                        span.link__name Other Pages
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/403.html') 403
+                            a.sidebar__link(href='./pages/404.html') 404
+                            a.sidebar__link(href='./pages/500.html') 500
+                            a.sidebar__link(href='./pages/blank-page.html') blank page
+                li.sidebar__item.sidebar__dropdown
+                    a.sidebar__link.dropdown--collapse(href='#')
+                        i.link__icon.fa.fa-cogs
+                        span.link__name widgets
+                    ul.sidebar__submenu.dropdown--collapse
+                        li.sidebar__item
+                            a.sidebar__link(href='./pages/stats-widgets.html') stats widgets
+                            a.sidebar__link(href='./pages/social-widgets.html') social widgets
+                            a.sidebar__link(href='./pages/other-widgets.html') other widgets
+    .page__content
+        button.btn.btn__template(type='button')
+            i.fa.fa-cog.fa-spin
+        .template__editor
+            .sidebar__settings
+                h6.setting__title Sidebar Background Color
+                .settings__content
+                    button.btn.btn__change.change__sidebar--danger.btn--danger(type='button')
+                    button.btn.btn__change.change__sidebar--info.btn--info(type='button')
+                    button.btn.btn__change.change__sidebar--primary.btn--primary(type='button')
+                    button.btn.btn__change.change__sidebar--success.btn--success(type='button')
+                    button.btn.btn__change.change__sidebar--warning.btn--warning(type='button')
+            .header__settings
+                h6.setting__title Header Background Color
+                .settings__content
+                    button.btn.btn__change.change__header--danger.btn--danger(type='button')
+                    button.btn.btn__change.change__header--info.btn--info(type='button')
+                    button.btn.btn__change.change__header--primary.btn--primary(type='button')
+                    button.btn.btn__change.change__header--success.btn--success(type='button')
+                    button.btn.btn__change.change__header--warning.btn--warning(type='button')
+                    button.btn.btn__change.change__header--gradient.btn--gradient(type='button')
+            .brand__settings
+                h6.setting__title Brand Background Color
+                .settings__content
+                    button.btn.btn__change.change__brand--danger.btn--danger(type='button')
+                    button.btn.btn__change.change__brand--info.btn--info(type='button')
+                    button.btn.btn__change.change__brand--primary.btn--primary(type='button')
+                    button.btn.btn__change.change__brand--success.btn--success(type='button')
+                    button.btn.btn__change.change__brand--warning.btn--warning(type='button')
+                    button.btn.btn__change.change__brand--gradient.btn--gradient(type='button')
+            button.btn.btn--primary.btn--reset.btn--example(type='button')
+                | Reset
+        .row
+            .dashboard__tools
+                .left__content
+                    h5.content__title Dashboard
+                    p.content__desc Welcome Matthew Doe
+                .right__content
+                    button.btn.btn--primary.btn--outline.btn--sm.btn--round.mr--2(type='button')
+                        | Edit
+                    button.btn.btn--primary.btn--outline.btn--sm.btn--round(type='button')
+                        | Update Dashboard
+        .row
+            .col-xs.col-sm-12.col-md-12.col-lg-6.col-xl-3.mt--3
+                .card.stats__widget.card--primary
+                    .card__body
+                        .content__body
+                            .content__left
+                                h5.left__title 2183
+                                p.left__desc Sales
+                            .content__right
+                                i.fa.fa-shopping-cart.icon--stats
+            .col-xs.col-sm-12.col-md-12.col-lg-6.col-xl-3.mt--3
+                .card.stats__widget
+                    .card__body
+                        .content__body
+                            .content__left
+                                h5.left__title 742
+                                p.left__desc New Users
+                            .content__right
+                                i.fa.fa-user.icon--stats
+            .col-xs.col-sm-12.col-md-12.col-lg-6.col-xl-3.mt--3
+                .card.stats__widget
+                    .card__body
+                        .content__body
+                            .content__left
+                                h5.left__title 321
+                                p.left__desc Orders
+                            .content__right
+                                i.fa.fa-plus.icon--stats
+            .col-xs.col-sm-12.col-md-12.col-lg-6.col-xl-3.mt--3
+                .card.stats__widget
+                    .card__body
+                        .content__body
+                            .content__left
+                                h5.left__title 3000$
+                                p.left__desc Profit
+                            .content__right
+                                i.fa.fa-usd.icon--stats
+        .row
+            //- // Sales Overview
+            .col-xs.col-sm-12.col-md-12.col-lg-12.col-xl-12.mt--4
+                .card.card__tools(class='card--border--0.')
+                    .card__heading
+                        h6.card__title Sales Overview
+                        .card__tools
+                            button.btn.btn__hidden.btn__card--hidden(type='button')
+                                i.fa.fa-minus
+                            button.btn.btn__refresh.btn__card--refresh(type='button')
+                                i.fa.fa-refresh
+                            button.btn.btn__close.btn__card--close(type='button')
+                                i.fa.fa-times
+                        .heading__bottom
+                            .chart__settings
+                                ul.list--unstyled.list--inline.mb--0
+                                    li.list__item--inline
+                                        .option--1
+                                            span.status
+                                            | Sales
+                                    li.list__item--inline
+                                        .option--2
+                                            span.status
+                                            | Profit
+                    .card__body.p--0
+                        .dashboard__sales.dashboard__chart
+        .row
+            //- // Social Stats
+            .col-xs.col-sm-12.col-md-12.col-lg-4.col-xl-4.mt--4
+                .card.card__tools(class='card--border--0.')
+                    .card__heading
+                        h6.card__title Social Stats
+                        .card__tools
+                            button.btn.btn__hidden.btn__card--hidden(type='button')
+                                i.fa.fa-minus
+                            button.btn.btn__refresh.btn__card--refresh(type='button')
+                                i.fa.fa-refresh
+                            button.btn.btn__close.btn__card--close(type='button')
+                                i.fa.fa-times
+                        .heading__bottom
+                            .chart__settings
+                                ul.list--unstyled.list--inline.mb--0.list__bar
+                                    li.list__item--inline
+                                        .option--1
+                                            span.status.status--facebook
+                                            | Facebook
+                                    li.list__item--inline
+                                        .option--2
+                                            span.status.status--twitter
+                                            | Twitter
+                    .card__body.p--0
+                        .social__chart.dashboard__chart
+            //- // Browser Stats
+            .col-xs.col-sm-12.col-md-12.col-lg-4.col-xl-4.mt--4
+                .card.card__tools(class='card--border--0.')
+                    .card__heading
+                        h6.card__title Browser Stats
+                        .card__tools
+                            button.btn.btn__hidden.btn__card--hidden(type='button')
+                                i.fa.fa-minus
+                            button.btn.btn__refresh.btn__card--refresh(type='button')
+                                i.fa.fa-refresh
+                            button.btn.btn__close.btn__card--close(type='button')
+                                i.fa.fa-times
+                        .heading__bottom
+                            .chart__settings
+                                ul.list--unstyled.list--inline.mb--0.list__bar
+                                    li.list__item--inline
+                                        .option--1
+                                            span.status.status--chrome
+                                            | Chrome
+                                    li.list__item--inline
+                                        .option--2
+                                            span.status.status--mozilla
+                                            | Mozilla
+                    .card__body.p--0
+                        .browser__chart.dashboard__chart
+            //- // Visitor Locations
+            .col-xs.col-sm-12.col-md-12.col-lg-4.col-xl-4.mt--4
+                .row
+                    .col-xs.col-sm-12.col-md-12.col-lg-12.col-xl-12
+                        .card.profile__widget.profile__widget--4.card--primary
+                            .card__body
+                                .widget__header
+                                    .header__wrapper
+                                        .header__content
+                                            img.true(src='./img/widgets/profile.jpg' alt='')
+                                            .content__right
+                                                h6.content__title Matthew Doe
+                                                .social__links
+                                                    a.social__link(href='#')
+                                                        i.fa.fa-facebook
+                                                    a.social__link(href='#')
+                                                        i.fa.fa-twitter
+                                                    a.social__link(href='#')
+                                                        i.fa.fa-google-plus
+                                                    a.social__link(href='#')
+                                                        i.fa.fa-pinterest
+                                                    a.social__link(href='#')
+                                                        i.fa.fa-vk
+                    .col-xs.col-sm-12.col-md-12.col-lg-12.col-xl-12.mt--4
+                        .card.social__widget--2.social__widget2--twitter
+                            .card__body
+                                i.fa.fa-twitter.social__icon
+                                .carousel.slide(data-ride='carousel')
+                                    .carousel__inner(role='listbox')
+                                        .carousel__item.active
+                                            .carousel__caption
+                                                h6.caption__title
+                                                    | Matthew Doe
+                                                p.caption__desc
+                                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptatem, ea commodi dolore eaque, sequi error!
+                                        .carousel__item
+                                            .carousel__caption
+                                                h6.caption__title
+                                                    | Andrew Nixon
+                                                p.caption__desc
+                                                    | Orci nec lacinia scelerisque, purus sapien malesuada turpis, at malesuada ante quam sit amet justo, vivamus sagittis.
+//- // Necessary Plugins
+script(src='./js/app.min.js')
+script(src='./js/apps/cards.min.js')
+script(src='./js/charts/chartist.min.js')
+script(src='./js/charts/chartist-plugin-tooltip.min.js')
+script(src='./js/maps/vmap.min.js')
+script(src='./js/maps/vmap-usa.min.js')
+script(src='./js/dashboard.min.js')
+script(src='./js/template-editor.min.js')
+script(src='./js/custom.min.js')

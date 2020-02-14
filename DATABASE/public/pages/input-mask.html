@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+    <link rel="icon" href="../img/" />
+    <title>Rocket</title>
+    <!-- Core Styles-->
+    <link href="../css/app.min.css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content ltr">
+    <!-- ///// Header ///// -->
+    <div class="header header--fixed">
+      <!-- ///// Header Left ///// -->
+      <div class="header__left">
+        <div class="only--mobile">
+          <div class="hamburger hamburger--collapse hamburger--mobile">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__brand"><a class="brand__link" href="./index.html"> <img class="brand__img" src="../img/logo.png" alt="" /><img class="brand__img--mobile" src="../img/logo-m.png" alt="" /><span class="brand__name">Rocket</span></a></div>
+        <div class="only--mobile">
+          <button class="btn header__btn--toggler" type="button"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+      <!-- ///// Header Right /////-->
+      <div class="header__right header__toggle">
+        <div class="header__content">
+          <!-- ///// Hidden Search /////-->
+          <div class="header__search search--close">
+            <div class="search__group"><i class="search__icon fa fa-search"></i>
+              <input class="search__control form__control" type="text" placeholder="Search..." />
+              <button class="btn search__btn--close" type="button"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- ///// Content Left /////-->
+          <div class="content__left">
+            <div class="hamburger hamburger--collapse is--active sidebar--toggle">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </div>
+            <button class="btn btn__screen" type="button"><i class="fa fa-arrows-alt"></i></button>
+          </div>
+          <!-- ///// Content Right /////-->
+          <ul class="nav content__right">
+            <li class="nav__item nav__item--desktop">
+              <button class="btn btn__search" type="button"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="nav__item">
+              <div class="notifications dropdown"><a class="dropdown__toggle notifications__dropdown nav__link" href="#" data-toggle="dropdown"><i class="notifications__icon fa fa-bell"></i><span class="only--mobile">notifications</span><span class="status status--pulse"></span></a>
+                <div class="dropdown__menu notifications__menu">
+                  <div class="notifications__header"><span class="notifications__title">latest notifications</span>
+                    <button class="btn btn--mute" type="button"><i class="fa fa-bell-slash"></i></button>
+                  </div>
+                  <ul class="notifications__content">
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--info"><i class="fa fa-info"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Information</h6>
+                          <p class="item__desc">New product is available</p><span class="item__info">15 min ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/5.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Cara Stevens</h6>
+                              <p class="item__desc">share your post: Lorem ipsum dolor sit amet.</p><span class="item__info">30 min ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--warning"><i class="fa fa-warning"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Warning</h6>
+                          <p class="item__desc">DDos attack</p><span class="item__info">1 hour ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/14.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Sakura Yamamoto</h6>
+                              <p class="item__desc">Follow your profile on twitter</p><span class="item__info">7 hours ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                  </ul>
+                  <div class="notifications__footer"><a class="notifications__link" href="#">sea all notifications</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item user dropdown nav__item--desktop"><a class="dropdown__toggle user__dropdown" href="#" data-toggle="dropdown"><img class="img-fluid user__img" src="../img/profile/profile-small.jpg" alt="" /></a>
+              <div class="dropdown__menu user__menu">
+                <div class="user__preview">
+                  <div class="user__top__content"><img class="img-fluid user__img" src="../img/profile/profile-big.jpg" alt="" /></div>
+                  <h6 class="user__title">Matthew Doe</h6><span class="user__desc">Front-End Developer</span>
+                </div><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-user"></i>profile</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-envelope"></i>inbox</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a>
+              </div>
+            </li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-user"></i>profile</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-envelope"></i>inbox				</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- ///// Sidebar Left /////-->
+      <div class="sidebar__left">
+        <div class="sidebar--bg"></div>
+        <nav class="sidebar__nav sidebar__scroll">
+          <ul class="sidebar__menu">
+            <li class="sidebar__header">navigation</li>
+            <li class="sidebar__item"><a class="sidebar__link link--single" href="../index.html"><i class="link__icon fa fa-home"></i><span class="link__name">home</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-sliders"></i><span class="link__name">layouts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./boxed-layout.html">boxed layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v1.html">header v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2.html">header v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2-fixed.html">header v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./footer.html">footer</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1.html">sidebar v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-fixed.html">sidebar v1 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-hidden.html">sidebar v1 hidden</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-sticky.html">sidebar v1 sticky</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2.html">sidebar v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-fixed.html">sidebar v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-sticky.html">sidebar v2 sticky</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Components</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-magic"></i><span class="link__name">ui components</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./alerts.html">alerts</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./badges.html">badges</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./buttons.html">buttons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./cards.html">cards</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropdowns.html">dropdowns</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./grid.html">grid</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./list-group.html">list group</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./modals.html">modals</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./navs.html">navs</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./pagination.html">pagination</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./popovers-tooltips.html">popovers &amp; tooltips</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./progress-bars.html">progress bars</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./spinners.html">spinners</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./typography.html">typography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-list"></i><span class="link__name">Forms</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./basic-forms.html">basic forms</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropzone-upload.html">dropzone upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-layout.html">forms layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-upload.html">forms upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-validation.html">forms validation</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./input-group.html">input group</a>
+                </li>
+                <li class="sidebar__item"><a class="active sidebar__link" href="./input-mask.html">input mask</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./wysiwyg-editor.html">wysiwyg editor</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./xeditable.html">x-editable</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-table"></i><span class="link__name">Tables</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./basic-tables.html">basic tables</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./datatables.html">datatables</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-font"></i><span class="link__name">Icons</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./font-awesome.html">font awesome</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./ionicons.html">ionicons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./material-design-icons.html">material design icons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./weather-icons.html">weather icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-line-chart"></i><span class="link__name">Charts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./c3-js.html">c3</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chart-js.html">chart.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chartist-js.html">chartist</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./flot-js.html">flot</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./morris-js.html">morris.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./peity-js.html">peity</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./rickshaw-js.html">rickshaw</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sparkline-js.html">sparkline</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-map"></i><span class="link__name">Maps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./google-maps.html">google maps</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./jqvmap.html">vector maps</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Features</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-lock"></i><span class="link__name">authentication</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./forgot-password-v1.html">forgot password v1</a><a class="sidebar__link" href="./forgot-password-v2.html">forgot password v2</a><a class="sidebar__link" href="./lockscreen-v1.html">lockscreen v1</a><a class="sidebar__link" href="./lockscreen-v2.html">lockscreen v2</a><a class="sidebar__link" href="./register-v1.html">register v1</a><a class="sidebar__link" href="./register-v2.html">register v2</a><a class="sidebar__link" href="./sign-in-v1.html">sign in v1</a><a class="sidebar__link" href="./sign-in-v2.html">sign in v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-shopping-cart"></i><span class="link__name">e-commerce</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./customers.html">customers</a><a class="sidebar__link" href="./products.html">products</a><a class="sidebar__link" href="./orders.html">orders</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-rocket"></i><span class="link__name">apps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./chat.html">chat</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./inbox.html">inbox</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-external-link"></i><span class="link__name">Other Pages</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./403.html">403</a><a class="sidebar__link" href="./404.html">404</a><a class="sidebar__link" href="./500.html">500</a><a class="sidebar__link" href="./blank-page.html">blank page</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-cogs"></i><span class="link__name">widgets</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./stats-widgets.html">stats widgets</a><a class="sidebar__link" href="./social-widgets.html">social widgets</a><a class="sidebar__link" href="./other-widgets.html">other widgets</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page__content">
+        <button class="btn btn__template" type="button"><i class="fa fa-cog fa-spin"></i>
+        </button>
+        <div class="template__editor">
+          <div class="sidebar__settings">
+            <h6 class="setting__title">Sidebar Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__sidebar--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__sidebar--info btn--info" type="button"></button>
+              <button class="btn btn__change change__sidebar--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__sidebar--success btn--success" type="button"></button>
+              <button class="btn btn__change change__sidebar--warning btn--warning" type="button"></button>
+            </div>
+          </div>
+          <div class="header__settings">
+            <h6 class="setting__title">Header Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__header--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__header--info btn--info" type="button"></button>
+              <button class="btn btn__change change__header--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__header--success btn--success" type="button"></button>
+              <button class="btn btn__change change__header--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__header--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <div class="brand__settings">
+            <h6 class="setting__title">Brand Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__brand--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__brand--info btn--info" type="button"></button>
+              <button class="btn btn__change change__brand--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__brand--success btn--success" type="button"></button>
+              <button class="btn btn__change change__brand--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__brand--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--reset btn--example" type="button">Reset
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">input mask</h5>
+            <!-- Breadcrumb-->
+            <nav class="breadcrumb"><a class="breadcrumb__item" href="#">home</a><a class="breadcrumb__item" href="#">ui elements</a><span class="breadcrumb__item active">input mask</span></nav>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Input Mask-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Input Mask</h6>
+                <p class="card__desc">Use data-inputmask attribute to input element. or mixin input_mask</p>
+              </div>
+              <div class="card__body">
+              <div class="form__group">
+                <label class="form__label" for="inputMask01">Input Mask Date 1</label>
+                <input class="form__control" id="inputMask01" placeholder="dd/mm/yyyy" value="" data-inputmask="'alias': 'date'" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask02">Input Mask Date 2</label>
+                <input class="form__control" id="inputMask02" placeholder="mm/dd/yyyy" value="" data-inputmask="'alias': 'mm/dd/yyyy'" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask03">Input Mask Currency</label>
+                <input class="form__control" id="inputMask03" placeholder="$ 0.00" value="" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 2, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '0'" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask04">Input Mask License Plate</label>
+                <input class="form__control" id="inputMask04" placeholder="[9-]AAA-999" value="" data-inputmask="'mask': '[9-]AAA-999'" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask05">Input Mask Decimal</label>
+                <input class="form__control" id="inputMask05" placeholder="0" value="" data-inputmask="'alias': 'decimal', 'groupSeparator': ',', 'autoGroup': true" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="phoneNumberExample1">Input Mask Phone Number</label>
+                <input class="form__control" id="phoneNumberExample1" placeholder="(99) 9999-99999" value="" data-inputmask="" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask06">Input Mask Ip Number</label>
+                <input class="form__control" id="inputMask06" placeholder="128.128.128.128" value="" data-inputmask="'alias': 'ip'" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="inputMask07">Input Mask Email</label>
+                <input class="form__control" id="inputMask07" placeholder="simple@example.com" value="" data-inputmask="'alias': 'email'" />
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- Style Textual Inputs-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Style Input Mask</h6>
+                <p class="card__desc">Use data-inputmask attribute to input element or mixin input_mask.</p>
+              </div>
+              <div class="card__body">
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle01" placeholder="dd/mm/yyyy" value="" data-inputmask="'alias': 'date'" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle01">Input Mask Date 1</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle02" placeholder="mm/dd/yyyy" value="" data-inputmask="'alias': 'mm/dd/yyyy'" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle02">Input Mask Date 2</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="InputMaskCurrencyStyle" placeholder="$ 0.00" value="" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 2, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '0'" /><span class="control--animation"></span>
+                <label class="label__control" for="InputMaskCurrencyStyle">Input Mask Currency</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle04" placeholder="[9-]AAA-999" value="" data-inputmask="'mask': '[9-]AAA-999'" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle04">Input Mask License Plate</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle05" placeholder="0" value="" data-inputmask="'alias': 'decimal', 'groupSeparator': ',', 'autoGroup': true" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle05">Input Mask Decimal</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="phoneNumberExample2" placeholder="(99) 9999-99999" value="" data-inputmask="" /><span class="control--animation"></span>
+                <label class="label__control" for="phoneNumberExample2">Input Mask Phone Number</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle06" placeholder="128.128.128.128" value="" data-inputmask="'alias': 'ip'" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle06">Input Mask Ip Number</label>
+              </div>
+              <div class="form__group">
+                <input class="form__control--style" id="inputMaskStyle07" placeholder="simple@example.com" value="" data-inputmask="'alias': 'email'" /><span class="control--animation"></span>
+                <label class="label__control" for="inputMaskStyle07">Input Mask Email</label>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Bootstrap Mask-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Bootstrap Input Mask</h6>
+                <p class="card__desc">Here are examples of .form__control applied to each textual HTML5 input type.</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample01">Text</label>
+                  <input class="form__control" type="text" id="inputMaskBootstrapExample01" placeholder="" value="Artisanal kale" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample02">Search</label>
+                  <input class="form__control" type="search" id="inputMaskBootstrapExample02" placeholder="" value="How do I shoot web" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample03">E-mail</label>
+                  <input class="form__control" type="email" id="inputMaskBootstrapExample03" placeholder="" value="simple@example.com" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample04">Url</label>
+                  <input class="form__control" type="url" id="inputMaskBootstrapExample04" placeholder="" value="https://getbootstrap.com" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample05">Telephone</label>
+                  <input class="form__control" type="tel" id="inputMaskBootstrapExample05" placeholder="" value="1-(555)-555-5555" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample06">Paswword</label>
+                  <input class="form__control" type="password" id="inputMaskBootstrapExample06" placeholder="" value="Lorem" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputMaskBootstrapExample07">Number</label>
+                  <input class="form__control" type="number" id="inputMaskBootstrapExample07" placeholder="" value="21" />
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Bootstrap Style Input Mask-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Style Input Mask</h6>
+                <p class="card__desc">Here are examples of .form__control--style applied to each textual HTML5 input type.</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <input class="form__control--style" type="text" id="inputMaskBootstrapStyleExample01" placeholder="" value="Artisanal kale" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample01">Text</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="search" id="inputMaskBootstrapStyleExample02" placeholder="" value="How do I shoot web" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample02">Search</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="email" id="inputMaskBootstrapStyleExample03" placeholder="" value="simple@example.com" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample03">E-mail</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="url" id="inputMaskBootstrapStyleExample04" placeholder="" value="https://getbootstrap.com" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample04">Url</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="tel" id="inputMaskBootstrapStyleExample05" placeholder="" value="1-(555)-555-5555" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample05">Telephone</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="password" id="inputMaskBootstrapStyleExample06" placeholder="" value="Lorem" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample06">Paswword</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="number" id="inputMaskBootstrapStyleExample07" placeholder="" value="21" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputMaskBootstrapStyleExample07">Number</label>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="../js/app.min.js"></script>
+    <script src="../js/forms/jquery.inputmask.bundle.min.js"></script>
+    <script>
+      var phone_input = $("#phoneNumberExample1, #phoneNumberExample2");
+      $(":input").inputmask();
+      phone_input.inputmask("(99) 9999-99999");
+    </script>
+    <script src="../js/template-editor.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+  </body>
+</html>

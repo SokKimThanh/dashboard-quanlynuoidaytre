@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+    <link rel="icon" href="../img/" />
+    <title>Rocket</title>
+    <!-- Core Styles-->
+    <link href="../css/app.min.css" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content ltr">
+    <!-- ///// Header ///// -->
+    <div class="header header--fixed">
+      <!-- ///// Header Left ///// -->
+      <div class="header__left">
+        <div class="only--mobile">
+          <div class="hamburger hamburger--collapse hamburger--mobile">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__brand"><a class="brand__link" href="./index.html"> <img class="brand__img" src="../img/logo.png" alt="" /><img class="brand__img--mobile" src="../img/logo-m.png" alt="" /><span class="brand__name">Rocket</span></a></div>
+        <div class="only--mobile">
+          <button class="btn header__btn--toggler" type="button"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+      <!-- ///// Header Right /////-->
+      <div class="header__right header__toggle">
+        <div class="header__content">
+          <!-- ///// Hidden Search /////-->
+          <div class="header__search search--close">
+            <div class="search__group"><i class="search__icon fa fa-search"></i>
+              <input class="search__control form__control" type="text" placeholder="Search..." />
+              <button class="btn search__btn--close" type="button"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- ///// Content Left /////-->
+          <div class="content__left">
+            <div class="hamburger hamburger--collapse is--active sidebar--toggle">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </div>
+            <button class="btn btn__screen" type="button"><i class="fa fa-arrows-alt"></i></button>
+          </div>
+          <!-- ///// Content Right /////-->
+          <ul class="nav content__right">
+            <li class="nav__item nav__item--desktop">
+              <button class="btn btn__search" type="button"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="nav__item">
+              <div class="notifications dropdown"><a class="dropdown__toggle notifications__dropdown nav__link" href="#" data-toggle="dropdown"><i class="notifications__icon fa fa-bell"></i><span class="only--mobile">notifications</span><span class="status status--pulse"></span></a>
+                <div class="dropdown__menu notifications__menu">
+                  <div class="notifications__header"><span class="notifications__title">latest notifications</span>
+                    <button class="btn btn--mute" type="button"><i class="fa fa-bell-slash"></i></button>
+                  </div>
+                  <ul class="notifications__content">
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--info"><i class="fa fa-info"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Information</h6>
+                          <p class="item__desc">New product is available</p><span class="item__info">15 min ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/5.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Cara Stevens</h6>
+                              <p class="item__desc">share your post: Lorem ipsum dolor sit amet.</p><span class="item__info">30 min ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--warning"><i class="fa fa-warning"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Warning</h6>
+                          <p class="item__desc">DDos attack</p><span class="item__info">1 hour ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/14.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Sakura Yamamoto</h6>
+                              <p class="item__desc">Follow your profile on twitter</p><span class="item__info">7 hours ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                  </ul>
+                  <div class="notifications__footer"><a class="notifications__link" href="#">sea all notifications</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item user dropdown nav__item--desktop"><a class="dropdown__toggle user__dropdown" href="#" data-toggle="dropdown"><img class="img-fluid user__img" src="../img/profile/profile-small.jpg" alt="" /></a>
+              <div class="dropdown__menu user__menu">
+                <div class="user__preview">
+                  <div class="user__top__content"><img class="img-fluid user__img" src="../img/profile/profile-big.jpg" alt="" /></div>
+                  <h6 class="user__title">Matthew Doe</h6><span class="user__desc">Front-End Developer</span>
+                </div><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-user"></i>profile</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-envelope"></i>inbox</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a>
+              </div>
+            </li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-user"></i>profile</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-envelope"></i>inbox				</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- ///// Sidebar Left /////-->
+      <div class="sidebar__left">
+        <div class="sidebar--bg"></div>
+        <nav class="sidebar__nav sidebar__scroll">
+          <ul class="sidebar__menu">
+            <li class="sidebar__header">navigation</li>
+            <li class="sidebar__item"><a class="sidebar__link link--single" href="../index.html"><i class="link__icon fa fa-home"></i><span class="link__name">home</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-sliders"></i><span class="link__name">layouts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./boxed-layout.html">boxed layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v1.html">header v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2.html">header v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2-fixed.html">header v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./footer.html">footer</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1.html">sidebar v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-fixed.html">sidebar v1 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-hidden.html">sidebar v1 hidden</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-sticky.html">sidebar v1 sticky</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2.html">sidebar v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-fixed.html">sidebar v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-sticky.html">sidebar v2 sticky</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Components</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-magic"></i><span class="link__name">ui components</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./alerts.html">alerts</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./badges.html">badges</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./buttons.html">buttons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./cards.html">cards</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropdowns.html">dropdowns</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./grid.html">grid</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./list-group.html">list group</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./modals.html">modals</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./navs.html">navs</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./pagination.html">pagination</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./popovers-tooltips.html">popovers &amp; tooltips</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./progress-bars.html">progress bars</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./spinners.html">spinners</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./typography.html">typography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-list"></i><span class="link__name">Forms</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./basic-forms.html">basic forms</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropzone-upload.html">dropzone upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-layout.html">forms layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-upload.html">forms upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-validation.html">forms validation</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./input-group.html">input group</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./input-mask.html">input mask</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./wysiwyg-editor.html">wysiwyg editor</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./xeditable.html">x-editable</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-table"></i><span class="link__name">Tables</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./basic-tables.html">basic tables</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./datatables.html">datatables</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-font"></i><span class="link__name">Icons</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./font-awesome.html">font awesome</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./ionicons.html">ionicons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./material-design-icons.html">material design icons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./weather-icons.html">weather icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-line-chart"></i><span class="link__name">Charts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./c3-js.html">c3</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chart-js.html">chart.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chartist-js.html">chartist</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./flot-js.html">flot</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./morris-js.html">morris.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./peity-js.html">peity</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./rickshaw-js.html">rickshaw</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sparkline-js.html">sparkline</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-map"></i><span class="link__name">Maps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./google-maps.html">google maps</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./jqvmap.html">vector maps</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Features</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-lock"></i><span class="link__name">authentication</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./forgot-password-v1.html">forgot password v1</a><a class="sidebar__link" href="./forgot-password-v2.html">forgot password v2</a><a class="sidebar__link" href="./lockscreen-v1.html">lockscreen v1</a><a class="sidebar__link" href="./lockscreen-v2.html">lockscreen v2</a><a class="sidebar__link" href="./register-v1.html">register v1</a><a class="sidebar__link" href="./register-v2.html">register v2</a><a class="sidebar__link" href="./sign-in-v1.html">sign in v1</a><a class="sidebar__link" href="./sign-in-v2.html">sign in v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-shopping-cart"></i><span class="link__name">e-commerce</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="active sidebar__link" href="./customers.html">customers</a><a class="sidebar__link" href="./products.html">products</a><a class="sidebar__link" href="./orders.html">orders</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-rocket"></i><span class="link__name">apps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./chat.html">chat</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./inbox.html">inbox</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-external-link"></i><span class="link__name">Other Pages</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./403.html">403</a><a class="sidebar__link" href="./404.html">404</a><a class="sidebar__link" href="./500.html">500</a><a class="sidebar__link" href="./blank-page.html">blank page</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-cogs"></i><span class="link__name">widgets</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./stats-widgets.html">stats widgets</a><a class="sidebar__link" href="./social-widgets.html">social widgets</a><a class="sidebar__link" href="./other-widgets.html">other widgets</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page__content ecommerce">
+        <!-- New Customer Modal-->
+        <div class="modal fade" id="modalNewCustomer" tabindex="-1" role="dialog" aria-labelledby="modalNewCustomer" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+          <div class="modal__dialog modal--lg" role="document">
+            <div class="modal__content">
+              <div class="modal__header">
+                <h5 class="modal__title">Add New Customer</h5>
+                <button class="btn close" type="button" data-dismiss="modal" aria-label="Close"> <i class="fa fa-times"></i>
+                </button>
+              </div>
+              <div class="modal__body">
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalName" placeholder="Name" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalName">Name</label>
+                    </div>
+                  </div>
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalNickname" placeholder="Nickname" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalNickname">Nickname</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="form__group">
+                      <input class="form__control--style" type="email" id="inputModalEmail" placeholder="Email" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalEmail">Email</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="form__group">
+                      <select class="form__control--style" id="selectModalCountry">
+                        <option />United States
+                        <option />Japan
+                        <option />Germany
+                      </select><span class="control--animation"></span>
+                      <label class="label__control" for="selectModalCountry">Country</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalCity" placeholder="City" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalCity">City</label>
+                    </div>
+                  </div>
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalZipCode" placeholder="Zip Code" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalZipCode">Zip Code</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalAddress" placeholder="Address" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalAddress">Address</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="form__group">
+                      <input class="form__control--style" type="text" id="inputModalTelephone" placeholder="Telephone" /><span class="control--animation"></span>
+                      <label class="label__control" for="inputModalTelephone">Telephone</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <label class="form__label mt--0 w--100">Upload image</label>
+                    <label class="file__upload">
+                      <input class="file__input form__control--style" type="file" /><span class="file__control--style"></span><span class="control--animation"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <form class="dropzone inbox__dropzone mb--3" action="../php/upload.php" id="fileUploadDropzone" enctype="multipart/form-data" />
+                      <div class="fallback">
+                        <input name="file" type="file" multiple="" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal__footer">
+                  <button class="btn btn__modal--close" type="button" data-dismiss="modal">Close</button>
+                  <button class="btn btn--primary" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E-commerce Content-->
+        <div class="ecommerce__content">
+          <div class="content__header">
+            <h5 class="header__title">Customers</h5>
+            <div class="content__tools">
+              <div class="tools__left">
+                <div class="dropdown">
+                  <button class="btn dropdown__toggle btn--primary btn--sm btn--round mr--2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Trash</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Edit</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Delete</a></li>
+                  </ul>
+                </div>
+                <button class="btn btn__modal btn--primary btn--compose btn--round btn--sm" type="button" data-toggle="modal" data-target="#modalNewCustomer">Add New Customer</button>
+              </div>
+            </div>
+          </div>
+          <table class="table table--responsive ecommerce__table table--hover" id="table__ecommerce">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Nickname</th>
+                <th>E-mail</th>
+                <th>Delivery</th>
+                <th>Date</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="content__box">
+                <td class="td__id">
+                   1</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/1.jpeg" alt="" />Matthew Doe</td>
+                <td class="td__nickname">Doe007</td>
+                <td class="td__email">simple@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">325,793$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   2</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/2.jpeg" alt="" />Airi Satou</td>
+                <td class="td__nickname">airi</td>
+                <td class="td__email">satou07@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">02/07/2017</td>
+                <td class="td__date">255,313$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   3</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/3.jpeg" alt="" />Brenden Wagner</td>
+                <td class="td__nickname">yellowBrenden</td>
+                <td class="td__email">cox@example.com</td>
+                <td class="td__delivery">San Francisco</td>
+                <td class="td__date">01/07/2017</td>
+                <td class="td__date">165,003$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   4</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/4.jpeg" alt="" />Bruno Nash</td>
+                <td class="td__nickname">crazyBruno</td>
+                <td class="td__email">bruno@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">86,000$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   5</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/5.jpeg" alt="" />Cara Stevens</td>
+                <td class="td__nickname">willi</td>
+                <td class="td__email">bc@example.com</td>
+                <td class="td__delivery">New York</td>
+                <td class="td__date">01/07/2017</td>
+                <td class="td__date">163,500$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   6</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/6.jpeg" alt="" />Donna Snider</td>
+                <td class="td__nickname">ceasar2</td>
+                <td class="td__email">cv@example.com</td>
+                <td class="td__delivery">New York</td>
+                <td class="td__date">01/07/2017</td>
+                <td class="td__date">106,450$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   7</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/7.jpeg" alt="" />Finn Camacho</td>
+                <td class="td__nickname">dai1</td>
+                <td class="td__email">dai1@example.com</td>
+                <td class="td__delivery">Edinburgh</td>
+                <td class="td__date">01/07/2017</td>
+                <td class="td__date">217,500$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   8</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/8.jpeg" alt="" />Fiona Green</td>
+                <td class="td__nickname">fiona1</td>
+                <td class="td__email">fio@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">35,793$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   9</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/9.jpeg" alt="" />Gavin Cortez</td>
+                <td class="td__nickname">gavin0192</td>
+                <td class="td__email">gav@example.com</td>
+                <td class="td__delivery">London</td>
+                <td class="td__date">01/07/2017</td>
+                <td class="td__date">25,723$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   10</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/10.jpeg" alt="" />Jena Gaines</td>
+                <td class="td__nickname">jena1</td>
+                <td class="td__email">sga@example.com</td>
+                <td class="td__delivery">New York</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">311,236$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   11</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/11.jpeg" alt="" />Herrod Chandler</td>
+                <td class="td__nickname">herrod_black</td>
+                <td class="td__email">asda@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">29,111$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   12</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/12.jpeg" alt="" />Howard Hatfield</td>
+                <td class="td__nickname">howard904</td>
+                <td class="td__email">howard@example.com</td>
+                <td class="td__delivery">New York</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">3,000$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   13</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/13.jpeg" alt="" />Jackson Bradshaw</td>
+                <td class="td__nickname">jack_01</td>
+                <td class="td__email">jj@example.com</td>
+                <td class="td__delivery">Edinburgh</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">31,123$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   14</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/14.jpeg" alt="" />Sakura Yamamoto</td>
+                <td class="td__nickname">moto1</td>
+                <td class="td__email">sakura@example.com</td>
+                <td class="td__delivery">Tokyo</td>
+                <td class="td__date">03/07/2017</td>
+                <td class="td__date">5,711$</td>
+              </tr>
+              <tr class="content__box">
+                <td class="td__id">
+                   15</td>
+                <td class="td__user"><img class="img--fluid" src="../img/users/15.jpeg" alt="" />Yuri Berry</td>
+                <td class="td__nickname">yuriuri7</td>
+                <td class="td__email">yuri@example.com</td>
+                <td class="td__delivery">Moscow</td>
+                <td class="td__date">02/07/2017</td>
+                <td class="td__date">21,793$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="app__sidebar__right ecommerce__sidebar">
+          <div class="ecommerce__content--top">
+            <div class="ecommerce__author"><img class="author__img" src="../img/profile/profile-big.jpg" alt="" />
+              <div class="author__details">
+                <h5 class="author__title">Matthew Doe</h5>
+                from 
+                <a class="link" href="#">simple2@example.com</a>
+                to 
+                <a class="link" href="#">me</a>
+              </div>
+            </div>
+            <button class="btn btn--close" type="button"><i class="fa fa-times"></i></button>
+          </div>
+          <div class="ecommerce__content--bottom">
+            <div class="ecommerce__content__wrapper">
+              <div class="ecommerce__content__items">
+                <div class="ecommerce__content__scroll">
+                  <div class="ecommerce__item">
+                    <ul class="nav nav__tabs ecommerce__nav" role="tablist">
+                      <li class="nav__item "><a class="nav__link active" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">profile</a></li>
+                      <li class="nav__item "><a class="nav__link " data-toggle="tab" href="#orders" role="tab" aria-controls="orders">orders</a></li>
+                    </ul>
+                    <div class="tab__content ">
+                      <div class="tab__pane fade active show" id="profile" role="tabpanel">
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputName" placeholder="" value="Matthew Doe" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputName">Name</label>
+                            </div>
+                          </div>
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputNickname" placeholder="" value="Doe007" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputNickname">Nickname</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="form__group">
+                              <input class="form__control--style" type="email" id="inputEmail" placeholder="" value="simple@example.com" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputEmail">E-mail</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="form__group">
+                              <select class="form__control--style" id="selectCountry">
+                                <option />United States
+                                <option />Japan
+                                <option />Germany
+                              </select><span class="control--animation"></span>
+                              <label class="label__control" for="selectCountry">Country</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputName" placeholder="" value="New York" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputName">City</label>
+                            </div>
+                          </div>
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputName" placeholder="" value="11201" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputName">Zip Code</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputName" placeholder="" value="395 Pearl St, Brooklyn" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputName">Address</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="form__group">
+                              <input class="form__control--style" type="text" id="inputName" placeholder="" value="0123-456-789" /><span class="control--animation"></span>
+                              <label class="label__control" for="inputName">Telephone</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <label class="form__label mt--0 w--100">Upload image</label>
+                            <label class="file__upload">
+                              <input class="file__input form__control--style" type="file" /><span class="file__control--style"></span><span class="control--animation"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row pull-right">
+                          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <button class="btn btn--danger mr--1" type="button">Cancel
+                            </button>
+                            <button class="btn btn--primary" type="button">Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab__pane fade " id="orders" role="tabpanel">
+                        <table class="table table--responsive thead--default">
+                          <thead>
+                            <tr>
+                              <th>
+                                 #</th>
+                              <th>
+                                 Product Name</th>
+                              <th>
+                                 Date</th>
+                              <th>
+                                 Cost</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Red T-shirt</td>
+                              <td>02/07.2017</td>
+                              <td>1000$</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Yellow T-shirt</td>
+                              <td>02/07.2017</td>
+                              <td>1000$</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Blue T-shirt</td>
+                              <td>02/07.2017</td>
+                              <td>1000$</td>
+                            </tr>
+                            <tr scope="row">
+                              <td class="text-right" colspan="3">Total:</td>
+                              <td>
+                                 3000$</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="../js/app.min.js"></script>
+    <script src="../js/forms/dropzone.min.js"></script>
+    <script src="../js/apps/e-commerce.min.js"></script>
+    <script src="../js/tables/jquery.dataTables.min.js"></script>
+    <script src="../js/tables/dataTables.responsive.js"></script>
+    <script>
+      $(document).ready(function() {
+      	$('#table__ecommerce').DataTable({
+      		"dom": '<<"" <"dataTable_top left col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6"i<"clear">> <"dataTable_top right col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6"f<"clear">> >rt<"bottom"p<"clear">>',
+      		"oLanguage": { "sSearch": "Search" }
+      	});
+      });
+    </script>
+    <script src="../js/custom.min.js"></script>
+  </body>
+</html>
