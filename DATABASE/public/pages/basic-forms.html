@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+    <link rel="icon" href="../img/" />
+    <title>Rocket</title>
+    <!-- Core Styles-->
+    <link href="../css/app.min.css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content ltr">
+    <!-- ///// Header ///// -->
+    <div class="header header--fixed">
+      <!-- ///// Header Left ///// -->
+      <div class="header__left">
+        <div class="only--mobile">
+          <div class="hamburger hamburger--collapse hamburger--mobile">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__brand"><a class="brand__link" href="./index.html"> <img class="brand__img" src="../img/logo.png" alt="" /><img class="brand__img--mobile" src="../img/logo-m.png" alt="" /><span class="brand__name">Rocket</span></a></div>
+        <div class="only--mobile">
+          <button class="btn header__btn--toggler" type="button"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+      <!-- ///// Header Right /////-->
+      <div class="header__right header__toggle">
+        <div class="header__content">
+          <!-- ///// Hidden Search /////-->
+          <div class="header__search search--close">
+            <div class="search__group"><i class="search__icon fa fa-search"></i>
+              <input class="search__control form__control" type="text" placeholder="Search..." />
+              <button class="btn search__btn--close" type="button"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- ///// Content Left /////-->
+          <div class="content__left">
+            <div class="hamburger hamburger--collapse is--active sidebar--toggle">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </div>
+            <button class="btn btn__screen" type="button"><i class="fa fa-arrows-alt"></i></button>
+          </div>
+          <!-- ///// Content Right /////-->
+          <ul class="nav content__right">
+            <li class="nav__item nav__item--desktop">
+              <button class="btn btn__search" type="button"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="nav__item">
+              <div class="notifications dropdown"><a class="dropdown__toggle notifications__dropdown nav__link" href="#" data-toggle="dropdown"><i class="notifications__icon fa fa-bell"></i><span class="only--mobile">notifications</span><span class="status status--pulse"></span></a>
+                <div class="dropdown__menu notifications__menu">
+                  <div class="notifications__header"><span class="notifications__title">latest notifications</span>
+                    <button class="btn btn--mute" type="button"><i class="fa fa-bell-slash"></i></button>
+                  </div>
+                  <ul class="notifications__content">
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--info"><i class="fa fa-info"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Information</h6>
+                          <p class="item__desc">New product is available</p><span class="item__info">15 min ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/5.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Cara Stevens</h6>
+                              <p class="item__desc">share your post: Lorem ipsum dolor sit amet.</p><span class="item__info">30 min ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--warning"><i class="fa fa-warning"></i></span></span><span class="item__content"> 
+                          <h6 class="item__title">Warning</h6>
+                          <p class="item__desc">DDos attack</p><span class="item__info">1 hour ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/14.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Sakura Yamamoto</h6>
+                              <p class="item__desc">Follow your profile on twitter</p><span class="item__info">7 hours ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                  </ul>
+                  <div class="notifications__footer"><a class="notifications__link" href="#">sea all notifications</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item user dropdown nav__item--desktop"><a class="dropdown__toggle user__dropdown" href="#" data-toggle="dropdown"><img class="img-fluid user__img" src="../img/profile/profile-small.jpg" alt="" /></a>
+              <div class="dropdown__menu user__menu">
+                <div class="user__preview">
+                  <div class="user__top__content"><img class="img-fluid user__img" src="../img/profile/profile-big.jpg" alt="" /></div>
+                  <h6 class="user__title">Matthew Doe</h6><span class="user__desc">Front-End Developer</span>
+                </div><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-user"></i>profile</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-envelope"></i>inbox</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a>
+              </div>
+            </li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-user"></i>profile</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-envelope"></i>inbox				</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- ///// Sidebar Left /////-->
+      <div class="sidebar__left">
+        <div class="sidebar--bg"></div>
+        <nav class="sidebar__nav sidebar__scroll">
+          <ul class="sidebar__menu">
+            <li class="sidebar__header">navigation</li>
+            <li class="sidebar__item"><a class="sidebar__link link--single" href="../index.html"><i class="link__icon fa fa-home"></i><span class="link__name">home</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-sliders"></i><span class="link__name">layouts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./boxed-layout.html">boxed layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v1.html">header v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2.html">header v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./header-v2-fixed.html">header v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./footer.html">footer</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1.html">sidebar v1</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-fixed.html">sidebar v1 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-hidden.html">sidebar v1 hidden</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v1-sticky.html">sidebar v1 sticky</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2.html">sidebar v2</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-fixed.html">sidebar v2 fixed</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sidebar-v2-sticky.html">sidebar v2 sticky</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Components</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-magic"></i><span class="link__name">ui components</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./alerts.html">alerts</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./badges.html">badges</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./buttons.html">buttons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./cards.html">cards</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropdowns.html">dropdowns</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./grid.html">grid</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./list-group.html">list group</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./modals.html">modals</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./navs.html">navs</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./pagination.html">pagination</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./popovers-tooltips.html">popovers &amp; tooltips</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./progress-bars.html">progress bars</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./spinners.html">spinners</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./typography.html">typography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-list"></i><span class="link__name">Forms</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="active sidebar__link" href="./basic-forms.html">basic forms</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./dropzone-upload.html">dropzone upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-layout.html">forms layout</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-upload.html">forms upload</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./forms-validation.html">forms validation</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./input-group.html">input group</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./input-mask.html">input mask</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./wysiwyg-editor.html">wysiwyg editor</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./xeditable.html">x-editable</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-table"></i><span class="link__name">Tables</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./basic-tables.html">basic tables</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./datatables.html">datatables</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-font"></i><span class="link__name">Icons</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./font-awesome.html">font awesome</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./ionicons.html">ionicons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./material-design-icons.html">material design icons</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./weather-icons.html">weather icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-line-chart"></i><span class="link__name">Charts</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./c3-js.html">c3</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chart-js.html">chart.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./chartist-js.html">chartist</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./flot-js.html">flot</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./morris-js.html">morris.js</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./peity-js.html">peity</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./rickshaw-js.html">rickshaw</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./sparkline-js.html">sparkline</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-map"></i><span class="link__name">Maps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./google-maps.html">google maps</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./jqvmap.html">vector maps</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__header">Features</li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-lock"></i><span class="link__name">authentication</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./forgot-password-v1.html">forgot password v1</a><a class="sidebar__link" href="./forgot-password-v2.html">forgot password v2</a><a class="sidebar__link" href="./lockscreen-v1.html">lockscreen v1</a><a class="sidebar__link" href="./lockscreen-v2.html">lockscreen v2</a><a class="sidebar__link" href="./register-v1.html">register v1</a><a class="sidebar__link" href="./register-v2.html">register v2</a><a class="sidebar__link" href="./sign-in-v1.html">sign in v1</a><a class="sidebar__link" href="./sign-in-v2.html">sign in v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-shopping-cart"></i><span class="link__name">e-commerce</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./customers.html">customers</a><a class="sidebar__link" href="./products.html">products</a><a class="sidebar__link" href="./orders.html">orders</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-rocket"></i><span class="link__name">apps</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./chat.html">chat</a>
+                </li>
+                <li class="sidebar__item"><a class="sidebar__link" href="./inbox.html">inbox</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-external-link"></i><span class="link__name">Other Pages</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./403.html">403</a><a class="sidebar__link" href="./404.html">404</a><a class="sidebar__link" href="./500.html">500</a><a class="sidebar__link" href="./blank-page.html">blank page</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="#"><i class="link__icon fa fa-cogs"></i><span class="link__name">widgets</span></a>
+              <ul class="sidebar__submenu dropdown--collapse">
+                <li class="sidebar__item"><a class="sidebar__link" href="./stats-widgets.html">stats widgets</a><a class="sidebar__link" href="./social-widgets.html">social widgets</a><a class="sidebar__link" href="./other-widgets.html">other widgets</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page__content">
+        <button class="btn btn__template" type="button"><i class="fa fa-cog fa-spin"></i>
+        </button>
+        <div class="template__editor">
+          <div class="sidebar__settings">
+            <h6 class="setting__title">Sidebar Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__sidebar--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__sidebar--info btn--info" type="button"></button>
+              <button class="btn btn__change change__sidebar--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__sidebar--success btn--success" type="button"></button>
+              <button class="btn btn__change change__sidebar--warning btn--warning" type="button"></button>
+            </div>
+          </div>
+          <div class="header__settings">
+            <h6 class="setting__title">Header Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__header--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__header--info btn--info" type="button"></button>
+              <button class="btn btn__change change__header--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__header--success btn--success" type="button"></button>
+              <button class="btn btn__change change__header--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__header--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <div class="brand__settings">
+            <h6 class="setting__title">Brand Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__brand--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__brand--info btn--info" type="button"></button>
+              <button class="btn btn__change change__brand--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__brand--success btn--success" type="button"></button>
+              <button class="btn btn__change change__brand--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__brand--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--reset btn--example" type="button">Reset
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">basic forms</h5>
+            <!-- Breadcrumb-->
+            <nav class="breadcrumb"><a class="breadcrumb__item" href="#">home</a><a class="breadcrumb__item" href="#">ui elements</a><span class="breadcrumb__item active">basic forms</span></nav>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Basic Form Elements -->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Basic Form Elements</h6>
+                <p class="card__desc">Use mixin form_input or class form__control</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <label class="form__label" for="inputTextExample1">Text</label>
+                  <input class="form__control" type="text" id="inputTextExample1" placeholder="Text" /><small class="form__block--help" id="helpBlock1">Simple help block for input</small>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputEmailExample1">Email</label>
+                  <input class="form__control" type="email" id="inputEmailExample1" placeholder="Email" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputPasswordExample1">Password</label>
+                  <input class="form__control" type="password" id="inputPasswordExample1" placeholder="Password" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="selectExample1">Select</label>
+                  <select class="form__control" id="selectExample1">
+                    <option />1
+                    <option />2
+                    <option />3
+                    <option />4
+                    <option />5
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="selectMultipleExample1">Select</label>
+                  <select class="form__control" id="selectMultipleExample1" multiple="multiple">
+                    <option />1
+                    <option />2
+                    <option />3
+                    <option />4
+                    <option />5
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="textareaExample1">Textarea</label>
+                  <textarea class="form__control" id="textareaExample1" rows="3"></textarea>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Style Form Elements -->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Style Form Elements</h6>
+                <p class="card__desc">Examples for custom inputs. Use mixin form_input or class form__control--style</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <input class="form__control--style" type="text" id="inputTextStyleExample1" placeholder="Text" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputTextStyleExample1">Text</label><small class="form__block--help" id="helpBlock2">Simple help block for input</small>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="email" id="inputEmailStyleExample1" placeholder="Email" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputEmailStyleExample1">Email</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="password" id="inputPasswordStyleExample1" placeholder="Password" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputPasswordStyleExample1">Password</label>
+                </div>
+                <div class="form__group">
+                  <select class="form__control--style" id="selectStyleExample1">
+                    <option />1
+                    <option />2
+                    <option />3
+                    <option />4
+                    <option />5
+                  </select><span class="control--animation"></span>
+                  <label class="label__control" for="selectStyleExample1">Select</label>
+                </div>
+                <div class="form__group">
+                  <select class="form__control--style" id="selectMultipleStyleExample1" multiple="multiple">
+                    <option />1
+                    <option />2
+                    <option />3
+                    <option />4
+                    <option />5
+                  </select><span class="control--animation"></span>
+                  <label class="label__control" for="selectMultipleStyleExample1">Select</label>
+                </div>
+                <div class="form__group">
+                  <textarea class="form__control--style" id="textareaExample2" rows="3"></textarea><span class="control--animation"></span>
+                  <label class="label__control" for="textareaExample2">Textarea</label>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Horizontal Forms -->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Horizontal Forms</h6>
+                <p class="card__desc">Use mixin form_horizontal or class .form__control to create horizontal forms</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputTextHorizontalExample1">Basic Input</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control" type="text" id="inputTextHorizontalExample1" placeholder="Text" /><small class="form__block--help" id="helpBlock3">Simple help block for input</small>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputEmailHorizontalExample1">Email</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control" type="email" id="inputEmailHorizontalExample1" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputPasswordHorizontalExample1">Password</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control" type="password" id="inputPasswordHorizontalExample1" placeholder="Password" />
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="selectHorizontalExample1">Basic Select</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <select class="form__control" id="selectHorizontalExample1">
+                      <option />1
+                      <option />2
+                      <option />3
+                      <option />4
+                      <option />5
+                    </select>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="selectHorizontalExample2">Multiple Select</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <select class="form__control" id="selectHorizontalExample2" multiple="multiple">
+                      <option />1
+                      <option />2
+                      <option />3
+                      <option />4
+                      <option />5
+                    </select>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="textareaHorizontalExample2">Textarea</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <textarea class="form__control" id="textareaHorizontalExample2" rows="3"></textarea>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Horizontal Style Forms -->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Horizontal Style Forms</h6>
+                <p class="card__desc">Use mixin form_horizontal or class .form__control--style to create horizontal style forms</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputTextHorizontalStyleExample1">Input</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control--style" type="text" id="inputTextHorizontalStyleExample1" placeholder="Text" /><span class="control--animation"></span><small class="form__block--help" id="helpBlock4">Simple help block for input</small>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputEmailStyleHorizontalExample1">Email</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control--style" type="email" id="inputEmailStyleHorizontalExample1" placeholder="Email" /><span class="control--animation"></span>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="inputPasswordStyleHorizontalExample1">Password</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <input class="form__control--style" type="password" id="inputPasswordStyleHorizontalExample1" placeholder="Password" /><span class="control--animation"></span>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="selectStyleHorizontalExample1">Select</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <select class="form__control--style" id="selectStyleHorizontalExample1">
+                      <option />1
+                      <option />2
+                      <option />3
+                      <option />4
+                      <option />5
+                    </select><span class="control--animation"></span>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="selectStyleHorizontalExample2">Multiple Select</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <select class="form__control--style" id="selectStyleHorizontalExample2" multiple="multiple">
+                      <option />1
+                      <option />2
+                      <option />3
+                      <option />4
+                      <option />5
+                    </select><span class="control--animation"></span>
+                  </div>
+                </div>
+                <div class="form__group row">
+                  <label class="col-sm-2 col__form__label" for="textareaHorizontalExample3">Textarea</label>
+                  <div class="col-sm-10 form--horizontal">
+                    <textarea class="form__control--style" id="textareaHorizontalExample3" rows="3"></textarea><span class="control--animation"></span>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Inline Forms-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Inline Forms</h6>
+                <p class="card__desc">Use the .form--inline class to display a series of labels, form controls, and buttons on a single horizontal row.</p>
+              </div>
+              <div class="card__body">
+              <form class="form--inline" />
+                <div class="form__group">
+                  <label class="form__label" for="inputTextExample2">Text</label>
+                  <input class="form__control" type="text" id="inputTextExample2" placeholder="Text" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputEmailExample2">Email</label>
+                  <input class="form__control" type="email" id="inputEmailExample2" placeholder="Email" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputPasswordExample2">Password</label>
+                  <input class="form__control" type="password" id="inputPasswordExample2" placeholder="Password" />
+                </div>
+              </form>
+              <form class="form--inline" />
+                <div class="form__group">
+                  <label class="form__label" for="inputEmailExample3">Email</label>
+                  <input class="form__control" type="email" id="inputEmailExample3" placeholder="Email" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputPasswordExample3">Password</label>
+                  <input class="form__control" type="password" id="inputPasswordExample3" placeholder="Password" />
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--primary" type="button">Submit
+                  </button>
+                </div>
+              </form>
+              <form class="form--inline" />
+                <div class="form__group">
+                  <p class="form__control--static ">simple@example.com</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputPasswordExample4"></label>
+                  <input class="form__control" type="password" id="inputPasswordExample4" placeholder="Password" />
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--primary" type="button">Confirm identity
+                  </button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Checkbox-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Checkbox</h6>
+                <p class="card__desc">Default checkboxes are improved upon with the help of .form__check</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__check">
+                  <div class="checkbox checkbox--primary">
+                    <input class="check" type="checkbox" id="checkbox01" />
+                    <label for="checkbox01">Check Me</label>
+                  </div>
+                </div>
+                <label class="form__label mt--0 w--100">Inline Checkbox</label>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--primary">
+                    <input class="check" type="checkbox" id="checkbox02" />
+                    <label for="checkbox02">Check Me</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--primary">
+                    <input class="check" type="checkbox" id="checkbox03" />
+                    <label for="checkbox03">Check Me</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--primary">
+                    <input class="check" type="checkbox" id="checkbox04" />
+                    <label for="checkbox04">Check Me</label>
+                  </div>
+                </div>
+                <label class="form__label mt--0 w--100">Checkbox Colors</label>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--primary">
+                    <input class="check" type="checkbox" id="checkbox05" />
+                    <label for="checkbox05">Checkbox Primary</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--default">
+                    <input class="check" type="checkbox" id="checkbox06" />
+                    <label for="checkbox06">Checkbox Default</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--success">
+                    <input class="check" type="checkbox" id="checkbox07" />
+                    <label for="checkbox07">Checkbox Success</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--info">
+                    <input class="check" type="checkbox" id="checkbox08" />
+                    <label for="checkbox08">Checkbox Info</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="checkbox checkbox--danger">
+                    <input class="check" type="checkbox" id="checkbox09" />
+                    <label for="checkbox09">Checkbox Danger</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline ml--0">
+                  <div class="checkbox checkbox--warning">
+                    <input class="check" type="checkbox" id="checkbox10" />
+                    <label for="checkbox10">Checkbox Success</label>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Radio-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Radio</h6>
+                <p class="card__desc">Default radios are improved upon with the help of .form__check</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__check">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio1" value="1" name="radio" />
+                    <label for="radio1">Check Me</label>
+                  </div>
+                </div>
+                <div class="form__check">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio2" value="2" name="radio" />
+                    <label for="radio2">Check Me</label>
+                  </div>
+                </div>
+                <label class="form__label mt--0 w--100">Inline Radio</label>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio3" value="1" name="radio" />
+                    <label for="radio3">Check Me</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio4" value="2" name="radio" />
+                    <label for="radio4">Check Me</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio5" value="3" name="radio" />
+                    <label for="radio5">Check Me</label>
+                  </div>
+                </div>
+                <label class="form__label mt--0 w--100">Radio Colors</label>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--primary">
+                    <input type="radio" id="radio6" value="1" name="radio" />
+                    <label for="radio6">Radio Primary</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--default">
+                    <input type="radio" id="radio7" value="2" name="radio" />
+                    <label for="radio7">Radio Default</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--success">
+                    <input type="radio" id="radio8" value="3" name="radio" />
+                    <label for="radio8">Radio Success</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--info">
+                    <input type="radio" id="radio9" value="4" name="radio" />
+                    <label for="radio9">Radio Info</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--danger">
+                    <input type="radio" id="radio10" value="5" name="radio" />
+                    <label for="radio10">Radio Danger</label>
+                  </div>
+                </div>
+                <div class="form__check form__check--inline">
+                  <div class="radio radio--warning">
+                    <input type="radio" id="radio11" value="6" name="radio" />
+                    <label for="radio11">Radio Warning</label>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Switch-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Switch</h6>
+                <p class="card__desc">Default switch are improved upon with the help of .form__check</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__check switch--primary">
+                  <input class="switch" type="checkbox" id="switch01" />
+                  <label class="switch__label " for="switch01"></label>
+                </div>
+                <div class="form__check switch--primary">
+                  <input class="switch" type="checkbox" id="switch02" />
+                  <label class="switch__label " for="switch02"></label>
+                </div>
+                <label class="form__label mt--0 w--100">Inline Switch</label>
+                <div class="form__check switch--primary form__check--inline">
+                  <input class="switch" type="checkbox" id="switch03" />
+                  <label class="switch__label " for="switch03"></label>
+                </div>
+                <div class="form__check switch--primary form__check--inline">
+                  <input class="switch" type="checkbox" id="switch04" />
+                  <label class="switch__label " for="switch04"></label>
+                </div>
+                <div class="form__check switch--primary form__check--inline">
+                  <input class="switch" type="checkbox" id="switch05" />
+                  <label class="switch__label " for="switch05"></label>
+                </div>
+                <label class="form__label mt--0 w--100">Inline Colors</label>
+                <div class="form__check switch--primary form__check--inline">
+                  <input class="switch" type="checkbox" id="switch06" />
+                  <label class="switch__label " for="switch06"></label>
+                </div>
+                <div class="form__check switch--default form__check--inline">
+                  <input class="switch" type="checkbox" id="switch07" />
+                  <label class="switch__label " for="switch07"></label>
+                </div>
+                <div class="form__check switch--success form__check--inline">
+                  <input class="switch" type="checkbox" id="switch08" />
+                  <label class="switch__label " for="switch08"></label>
+                </div>
+                <div class="form__check switch--info form__check--inline">
+                  <input class="switch" type="checkbox" id="switch09" />
+                  <label class="switch__label " for="switch09"></label>
+                </div>
+                <div class="form__check switch--danger form__check--inline">
+                  <input class="switch" type="checkbox" id="switch10" />
+                  <label class="switch__label " for="switch10"></label>
+                </div>
+                <div class="form__check switch--warning form__check--inline">
+                  <input class="switch" type="checkbox" id="switch11" />
+                  <label class="switch__label " for="switch11"></label>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Disabled Status-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Disabled Status</h6>
+                <p class="card__desc">Add the disabled boolean attribute on an input to prevent user interactions.</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <label class="form__label" for="inputDisabledTextExample1">Disabled Input</label>
+                  <input class="form__control" id="inputDisabledTextExample1" placeholder="Text" disabled="" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="selectExample2">Select</label>
+                  <select class="form__control" id="selectExample2" disabled="">
+                    <option />Disabled Select
+                  </select>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" id="inputDisabledTextStyleExample1" placeholder="Disabled Input" disabled="" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputDisabledTextStyleExample1">Disabled Input</label>
+                </div>
+                <div class="form__group">
+                  <select class="form__control--style" id="selectDisabledStyleExample1" disabled="">
+                    <option />Disabled Select
+                  </select><span class="control--animation"></span>
+                  <label class="label__control" for="selectDisabledStyleExample1">Select</label>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Other Forms-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Other Forms</h6>
+                <p class="card__desc">Examples for upload input, readonly input</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group">
+                  <label class="form__label" for="inputReadonlyTextExample1">Readonly Input</label>
+                  <input class="form__control" id="inputReadonlyTextExample1" placeholder="Text" readonly="" />
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" id="inputReadonlyTextStyleExample1" placeholder="Readonly Input" readonly="" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputReadonlyTextStyleExample1">Readonly Input</label>
+                </div>
+                <label class="form__label mt--0 w--100">Basic Upload Form</label>
+                <label class="file__upload">
+                  <input class="file__input" type="file" id="fileExample" /><span class="file__control"></span>
+                </label>
+                <label class="form__label mt--0 w--100">Style Upload Form</label>
+                <label class="file__upload">
+                  <input class="file__input form__control--style" type="file" /><span class="file__control--style"></span><span class="control--animation"></span>
+                </label>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Basic Form Sizing-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Basic Form Sizing</h6>
+                <p class="card__desc">Set heights using classes like .form__control--{size}</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group form__control--lg">
+                  <label class="form__label" for="inputTextExampleLg">Text</label>
+                  <input class="form__control" type="text" id="inputTextExampleLg" placeholder="Text" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="inputTextExampleStandart">Text</label>
+                  <input class="form__control" type="text" id="inputTextExampleStandart" placeholder="Text" />
+                </div>
+                <div class="form__group form__control--sm">
+                  <label class="form__label" for="inputTextExampleSm">Text</label>
+                  <input class="form__control" type="text" id="inputTextExampleSm" placeholder="Text" />
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <!-- Basic Form Sizing-->
+          <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">Stylec Form Sizing</h6>
+                <p class="card__desc">Set heights using classes like .form__control--{size}</p>
+              </div>
+              <div class="card__body">
+              <form />
+                <div class="form__group form--style--lg">
+                  <input class="form__control--style" type="text" id="inputTextStyleExampleLg" placeholder="Text" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputTextStyleExampleLg">Text</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__control--style" type="text" id="inputTextStyleExampleStandart" placeholder="Text" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputTextStyleExampleStandart">Text</label>
+                </div>
+                <div class="form__group form--style--sm">
+                  <input class="form__control--style" type="text" id="inputTextStyleExampleSm" placeholder="Text" /><span class="control--animation"></span>
+                  <label class="label__control" for="inputTextStyleExampleSm">Text</label>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="../js/app.min.js"></script>
+    <script src="../js/template-editor.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+  </body>
+</html>
